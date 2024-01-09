@@ -51,7 +51,7 @@ const Contact = () => {
                             <div className=" mt-8">
                                 <div className=" text-lg mb-2">Social handles</div>
                                 <div className=" flex gap-4 text-2xl hover:*:scale-110 *:transition">
-                                    <a href="https://wa.me/08106925925" target="__blank" title="WhatsApp"><FaWhatsapp /></a>
+                                    <a href="https://wa.me/+2348106925925" target="__blank" title="WhatsApp"><FaWhatsapp /></a>
                                     <a href="https://web.facebook.com/profile.php?id=100084453611899" target="__blank" title="Facebook"><FaFacebookF /></a>
                                     <a href="https://www.instagram.com/_az_ziz/" target="__blank" title="Instagram"><FaInstagram /></a>
                                 </div>
