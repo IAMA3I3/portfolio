@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+    body {
+      @apply relative min-h-screen min-w-full bg-gray-200 text-gray-800 cursor-default dark:bg-gray-600 dark:text-white
+    }
+    .scrollbar::-webkit-scrollbar,
+    html::-webkit-scrollbar {
+      @apply w-2 bg-gray-600
+    }
+    .scrollbar::-webkit-scrollbar {
+      @apply rounded-full
+    }
+    .scrollbar::-webkit-scrollbar-thumb,
+    html::-webkit-scrollbar-thumb {
+      @apply rounded-full bg-gray-800
+    }
+    .card {
+      @apply shadow-lg p-5 md:p-8 rounded-md border border-slate-300 dark:border-slate-800
+    }
+    textarea,
+    input {
+      @apply py-1 px-3 bg-transparent rounded-md border-2 border-gray-400 dark:border-white/50 dark:focus:border-white outline-none focus:border-gray-600 resize-none
+    }
+    textarea {
+      @apply h-40
+    }
+    button {
+      @apply  px-4 py-2 uppercase tracking-wide rounded-md active:scale-95
+    }
+    #menu-ic {
+      @apply *:w-8 *:h-1 *:bg-black/70 dark:*:bg-white *:rounded-full *:my-1 inline-block opacity-100 cursor-pointer
+    }
+    .open #menu-ic {
+      @apply even:*:opacity-0 first:*:rotate-[405deg] last:*:-rotate-[405deg] first:*:translate-y-2 last:*:-translate-y-2 *:bg-white
+    }
+    #navbar {
+      @apply py-8
+    }
+    #navbar.pin {
+      @apply py-1 bg-white/95 shadow-md dark:bg-slate-900/95
+    }
+    .open#navbar {
+      @apply backdrop-blur-sm shadow bg-slate-800/80 text-white
+    }
+    .nav-links {
+      @apply max-h-0 overflow-hidden md:max-h-screen text-white md:text-gray-700 md:dark:text-white
+    }
+    .open .nav-links {
+      @apply max-h-screen
+    }
 }

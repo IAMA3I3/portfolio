@@ -1,0 +1,54 @@
+import Project from "./Project"
+import abdubelVid from '../assets/projects/abdubel.mp4'
+import abdubelImg1 from '../assets/projects/abdubel1.png'
+import dashboard1 from '../assets/projects/dashboard1.mp4'
+import dashboardimg1 from '../assets/projects/dashboardimg1.png'
+import gallaryapp1 from '../assets/projects/gallaryapp1.mp4'
+import gallaryappimg1 from '../assets/projects/gallaryapp1.png'
+import dashboardVid from '../assets/projects/dashboardvid.mp4'
+import gate from '../assets/projects/gateinitiative01.mp4'
+import digworldImg from '../assets/projects/digworld.png'
+import digWorldVid from '../assets/projects/medigworld.mp4'
+import searchimg from '../assets/projects/searchimg.png'
+import searchimgVid from '../assets/projects/searchimg.mp4'
+import uploadchar from '../assets/projects/uploadchar.mp4'
+import todoVid from '../assets/projects/Todo.mp4'
+
+const Projects = () => {
+
+    const projectMap = projectList.map((item, index) => (
+        <div key={index} className="">
+            <Project item={item} projectList={projectList} index={index} />
+        </div>
+    ))
+
+    return (
+        <div className=" w-full py-20 bg-blue-500/30 dark:bg-slate-800/70" id="projects">
+            <div className=" container">
+                <div className=" text-3xl mb-4">Projects</div>
+                <div className=" grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    {projectMap}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Projects
+
+const projectList = [
+    { 'title': 'Digital world', 'img': digworldImg, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Digital world', 'img': '', 'vid': digWorldVid, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'GateInitiative website', 'img': '', 'vid': gate, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Gallary', 'img': gallaryappimg1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Gallary', 'img': '', 'vid': gallaryapp1, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Abdubel', 'img': abdubelImg1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Abdubel', 'img': '', 'vid': abdubelVid, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Dashboard design', 'img': dashboardimg1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Dashboard design', 'img': '', 'vid': dashboard1, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Dashboard design', 'img': '', 'vid': dashboardVid, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Search image pixabay api', 'img': searchimg, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Search image pixabay api', 'img': '', 'vid': searchimgVid, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Create character profile', 'img': '', 'vid': uploadchar, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Todo web app', 'img': '', 'vid': todoVid, 'isVid': true, 'hasLink': false, 'link': '' }
+]
