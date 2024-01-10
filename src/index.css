@@ -51,4 +51,10 @@
     .open .nav-links {
       @apply max-h-screen
     }
+    #sent {
+      @apply -top-12
+    }
+    .show#sent {
+      @apply top-12
+    }
 }
