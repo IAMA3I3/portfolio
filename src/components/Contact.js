@@ -16,7 +16,7 @@ const Contact = () => {
     }
 
     if (state.succeeded) {
-        console.log('Success')
+        // console.log('Success')
         document.querySelector('#mail-form').reset()
         showSent()
     }
