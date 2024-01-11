@@ -1,4 +1,5 @@
-import pic from '../assets/pics.png'
+// import pic from '../assets/pics.png'
+import me from '../assets/me.png'
 import Skills from '../components/Skills'
 
 const Home = ({ darkMode }) => {
@@ -9,7 +10,7 @@ const Home = ({ darkMode }) => {
                 <div className="card bg-white/80 dark:bg-black/70 rounded-3xl my-4">
                     <div className=" grid gap-4 grid-cols-1 md:grid-cols-2">
                         <div className="">
-                            <img className=' h-72 m-auto -mt-20' src={pic} alt="" />
+                            <img className=' max-h-72 m-auto -mt-20' src={me} alt="" />
                         </div>
                         <div className=" text-center md:text-left">
                             <div className=" text-2xl tracking-wider">Abdulazeez Salami</div>
