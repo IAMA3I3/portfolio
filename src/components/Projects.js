@@ -13,6 +13,8 @@ import searchimg from '../assets/projects/searchimg.png'
 import searchimgVid from '../assets/projects/searchimg.mp4'
 import uploadchar from '../assets/projects/uploadchar.mp4'
 import todoVid from '../assets/projects/Todo.mp4'
+import complianceDrive from '../assets/projects/complianceDrive.mp4'
+import stopshopDashboard from '../assets/projects/stopshopDashboard.mp4'
 
 const Projects = () => {
 
@@ -37,6 +39,8 @@ const Projects = () => {
 export default Projects
 
 const projectList = [
+    { 'title': 'Cloud Storage', 'img': '', 'vid': complianceDrive, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Shop App Dashboard', 'img': '', 'vid': stopshopDashboard, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Digital world', 'img': digworldImg, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
     { 'title': 'Digital world', 'img': '', 'vid': digWorldVid, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'GateInitiative website', 'img': '', 'vid': gate, 'isVid': true, 'hasLink': false, 'link': '' },
@@ -50,5 +54,5 @@ const projectList = [
     { 'title': 'Search image pixabay api', 'img': searchimg, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
     { 'title': 'Search image pixabay api', 'img': '', 'vid': searchimgVid, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Create character profile', 'img': '', 'vid': uploadchar, 'isVid': true, 'hasLink': false, 'link': '' },
-    { 'title': 'Todo web app', 'img': '', 'vid': todoVid, 'isVid': true, 'hasLink': false, 'link': '' }
+    { 'title': 'Todo web app', 'img': '', 'vid': todoVid, 'isVid': true, 'hasLink': false, 'link': '' },
 ]
