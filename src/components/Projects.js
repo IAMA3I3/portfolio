@@ -15,6 +15,10 @@ import uploadchar from '../assets/projects/uploadchar.mp4'
 import todoVid from '../assets/projects/Todo.mp4'
 import complianceDrive from '../assets/projects/complianceDrive.mp4'
 import stopshopDashboard from '../assets/projects/stopshopDashboard.mp4'
+import stopshop360Vid from '../assets/projects/stopshop360.mp4'
+import stopshop1 from '../assets/projects/stopshop1.png'
+import stopshop2 from '../assets/projects/stopshop2.png'
+import stopshop3 from '../assets/projects/stopshop3.png'
 
 const Projects = () => {
 
@@ -39,6 +43,10 @@ const Projects = () => {
 export default Projects
 
 const projectList = [
+    { 'title': 'Shop App Landing Page', 'img': stopshop1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Shop App Landing Page', 'img': stopshop2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Shop App Landing Page', 'img': stopshop3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Shop App Landing Page', 'img': '', 'vid': stopshop360Vid, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Cloud Storage', 'img': '', 'vid': complianceDrive, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Shop App Dashboard', 'img': '', 'vid': stopshopDashboard, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Digital world', 'img': digworldImg, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
