@@ -19,6 +19,11 @@ import stopshop360Vid from '../assets/projects/stopshop360.mp4'
 import stopshop1 from '../assets/projects/stopshop1.png'
 import stopshop2 from '../assets/projects/stopshop2.png'
 import stopshop3 from '../assets/projects/stopshop3.png'
+import archomezVid from '../assets/projects/ArcHomez.mp4'
+import archomez1 from '../assets/projects/archomez1.png'
+import archomez2 from '../assets/projects/archomez2.png'
+import archomez3 from '../assets/projects/archomez3.png'
+import archomez4 from '../assets/projects/archomez4.png'
 
 const Projects = () => {
 
@@ -43,6 +48,11 @@ const Projects = () => {
 export default Projects
 
 const projectList = [
+    { 'title': 'Real Estate Website', 'img': archomez1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Real Estate Website', 'img': archomez2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Real Estate Website', 'img': archomez3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Real Estate Website', 'img': archomez4, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Real Estate Website', 'img': '', 'vid': archomezVid, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Shop App Landing Page', 'img': stopshop1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
     { 'title': 'Shop App Landing Page', 'img': stopshop2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
     { 'title': 'Shop App Landing Page', 'img': stopshop3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
