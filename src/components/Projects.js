@@ -24,6 +24,12 @@ import archomez1 from '../assets/projects/archomez1.png'
 import archomez2 from '../assets/projects/archomez2.png'
 import archomez3 from '../assets/projects/archomez3.png'
 import archomez4 from '../assets/projects/archomez4.png'
+import tripstoreImg1 from '../assets/projects/tripstore.png'
+import tripstoreImg2 from '../assets/projects/tripstore1.png'
+import tripstoreImg3 from '../assets/projects/tripstore2.png'
+import tripstoreVid1 from '../assets/projects/tripstore.mp4'
+import tripstoreVid2 from '../assets/projects/tripstore1.mp4'
+import tripstoreVid3 from '../assets/projects/tripstore2.mp4'
 
 const Projects = () => {
 
@@ -48,14 +54,20 @@ const Projects = () => {
 export default Projects
 
 const projectList = [
-    { 'title': 'Real Estate Website', 'img': archomez1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Real Estate Website', 'img': archomez2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Real Estate Website', 'img': archomez3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Real Estate Website', 'img': archomez4, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Real Estate Website', 'img': '', 'vid': archomezVid, 'isVid': true, 'hasLink': false, 'link': '' },
-    { 'title': 'Shop App Landing Page', 'img': stopshop1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Shop App Landing Page', 'img': stopshop2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
-    { 'title': 'Shop App Landing Page', 'img': stopshop3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': tripstoreImg1, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': tripstoreImg2, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': tripstoreImg3, 'vid': '', 'isVid': false, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': '', 'vid': tripstoreVid1, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': '', 'vid': tripstoreVid2, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Tripstore Shop App', 'img': '', 'vid': tripstoreVid3, 'isVid': true, 'hasLink': false, 'link': '' },
+    { 'title': 'Real Estate Website', 'img': archomez1, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://archomez.com/' },
+    { 'title': 'Real Estate Website', 'img': archomez2, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://archomez.com/' },
+    { 'title': 'Real Estate Website', 'img': archomez3, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://archomez.com/' },
+    { 'title': 'Real Estate Website', 'img': archomez4, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://archomez.com/' },
+    { 'title': 'Real Estate Website', 'img': '', 'vid': archomezVid, 'isVid': true, 'hasLink': true, 'link': 'https://archomez.com/' },
+    { 'title': 'Shop App Landing Page', 'img': stopshop1, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://stopshop360-sepia.vercel.app/' },
+    { 'title': 'Shop App Landing Page', 'img': stopshop2, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://stopshop360-sepia.vercel.app/' },
+    { 'title': 'Shop App Landing Page', 'img': stopshop3, 'vid': '', 'isVid': false, 'hasLink': true, 'link': 'https://stopshop360-sepia.vercel.app/' },
     { 'title': 'Shop App Landing Page', 'img': '', 'vid': stopshop360Vid, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Cloud Storage', 'img': '', 'vid': complianceDrive, 'isVid': true, 'hasLink': false, 'link': '' },
     { 'title': 'Shop App Dashboard', 'img': '', 'vid': stopshopDashboard, 'isVid': true, 'hasLink': false, 'link': '' },
