@@ -32,7 +32,7 @@ export default function ThemeToggle() {
     }
 
     return (
-        <button onClick={toggleTheme} className=" relative h-6.25 aspect-2/1 rounded-full bg-primary/50 shadow-inner shadow-black/50 p-1 flex items-center">
+        <button onClick={toggleTheme} className=" relative h-6.25 aspect-2/1 rounded-full bg-primary/50 shadow-inner shadow-black/50 p-1 flex items-center cursor-pointer">
             <div className={`${isDarkTheme ? ' left-6.5' : ' left-1'} transition-all duration-500 absolute h-4.5 aspect-square text-[12px] rounded-full bg-primary dark:bg-black shadow flex justify-center items-center text-white`}>
                 {
                     isDarkTheme ?
