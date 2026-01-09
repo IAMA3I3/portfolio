@@ -21,6 +21,7 @@ export function MainNavbar() {
 
     const [isSticky, setIsSticky] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState("")
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,6 +48,50 @@ export function MainNavbar() {
         return () => window.removeEventListener('resize', setVH);
     }, [])
 
+    // Scroll spy for sections
+    useEffect(() => {
+        const handleScrollSpy = () => {
+            const sections = ['about', 'contact']
+            const scrollPosition = window.scrollY + 100 // offset for navbar
+
+            for (const section of sections) {
+                const element = document.getElementById(section)
+                if (element) {
+                    const { offsetTop, offsetHeight } = element
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(section)
+                        return
+                    }
+                }
+            }
+            
+            // If we're at the top or no section is active, clear active section
+            if (window.scrollY < 100) {
+                setActiveSection("")
+            }
+        }
+
+        handleScrollSpy()
+        window.addEventListener("scroll", handleScrollSpy)
+        return () => window.removeEventListener("scroll", handleScrollSpy)
+    }, [])
+
+    const isLinkActive = (link: typeof navLinks[0]) => {
+        // For home page
+        if (link.href === '/') {
+            return pathname === '/' && activeSection === ""
+        }
+        
+        // For section links (containing #)
+        if (link.href.includes('#')) {
+            const sectionId = link.href.split('#')[1]
+            return pathname === '/' && activeSection === sectionId
+        }
+        
+        // For regular page links
+        return pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/")
+    }
+
     return (
         <>
             <header className={`${isSticky ? "border-b shadow dark:shadow-black/40" : ""} transition-all duration-500 sticky top-0 z-50 border-border bg-background/80 backdrop-blur`}>
@@ -62,7 +107,7 @@ export function MainNavbar() {
                     <div className="hidden items-center gap-6 md:flex">
                         {
                             navLinks.map(link => {
-                                const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/")
+                                const isActive = isLinkActive(link)
                                 return (
                                     <Link
                                         key={link.name}
@@ -77,7 +122,7 @@ export function MainNavbar() {
                         <ThemeToggle />
                     </div>
 
-                    {/* Mobile Menu Button (placeholder for now) */}
+                    {/* Mobile Menu Button */}
                     <button onClick={() => setIsOpen(true)} className="md:hidden text-foreground text-3xl">
                         <HiMenuAlt1 />
                     </button>
@@ -89,7 +134,7 @@ export function MainNavbar() {
                 <div className=" flex-1 pr-4 space-y-4 overflow-y-auto scrollbar small-scrollbar">
                     {
                         navLinks.map(link => {
-                            const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== "/")
+                            const isActive = isLinkActive(link)
                             return (
                                 <Link key={link.name} href={link.href} onClick={() => setIsOpen(false)} className={`${isActive ? ' bg-primary/20 text-primary' : ' text-primary hover:bg-primary/20'} flex items-center font-semibold py-2 px-6 rounded-r-full`}>{link.name}</Link>
                             )
