@@ -46,6 +46,11 @@ export const project = defineType({
             name: "githubUrl",
             title: "GitHub URL",
             type: "url"
+        }),
+        defineField({
+            name: "featured",
+            title: "Featured Project",
+            type: "boolean",
         })
     ]
 })

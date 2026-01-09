@@ -49,7 +49,7 @@ export function MainNavbar() {
 
     return (
         <>
-            <header className={`${isSticky ? "border-b shadow" : ""} transition-all duration-500 sticky top-0 z-50 border-border bg-background/80 backdrop-blur`}>
+            <header className={`${isSticky ? "border-b shadow dark:shadow-black/40" : ""} transition-all duration-500 sticky top-0 z-50 border-border bg-background/80 backdrop-blur`}>
                 <nav className={`${isSticky ? "py-2 px-6" : "py-8 px-10 md:px-16"} transition-all duration-500 container mx-auto flex items-center justify-between`}>
 
                     {/* Logo */}
@@ -84,7 +84,7 @@ export function MainNavbar() {
                 </nav>
             </header>
             <div onClick={() => setIsOpen(false)} className={`${isOpen ? ' visible opacity-100' : ' invisible opacity-0'} transition-all duration-500 lg:hidden z-50 fixed top-0 left-0 w-screen h-screen bg-black/20 backdrop-blur-sm`}></div>
-            <div className={`${isOpen ? ' translate-x-0 shadow-lg' : ' -translate-x-62.5'} transition-all duration-500 lg:hidden z-50 fixed top-0 left-0 h-[calc(var(--vh,1vh)*100)] w-62.5 bg-white/90 dark:bg-black/70 backdrop-blur rounded-r-2xl shadow-black flex flex-col pr-4`}>
+            <div className={`${isOpen ? ' translate-x-0 shadow-lg' : ' -translate-x-62.5'} transition-all duration-500 lg:hidden z-50 fixed top-0 left-0 h-[calc(var(--vh,1vh)*100)] w-62.5 bg-white/90 dark:bg-black/80 backdrop-blur rounded-r-2xl shadow-black flex flex-col pr-4`}>
                 <div className=" h-20"></div>
                 <div className=" flex-1 pr-4 space-y-4 overflow-y-auto scrollbar small-scrollbar">
                     {

@@ -25,7 +25,7 @@ export default function Hero() {
                         </p>
                     </FadeIn>
                     <FadeIn delay={0}>
-                        <div className=" flex flex-col sm:flex-row gap-4 sm:items-center text-center">
+                        <div className=" flex flex-col justify-center md:justify-start sm:flex-row gap-4 sm:items-center text-center">
                             <Link href={'/projects'}>
                                 <Button text="View Projects" size="large" fullWidth />
                             </Link>

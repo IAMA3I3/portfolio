@@ -37,7 +37,7 @@ export const Button = ({ variant = "primary", size = "medium", rounded = false, 
                         ${size === "small" && " text-sm"}
                         ${size === "medium" && " text-base"}
                         ${size === "medium" && " text-lg"}
-                        mb-0.5
+                        mb-0.5x
                     `}
                 />
             }
@@ -49,7 +49,7 @@ export const Button = ({ variant = "primary", size = "medium", rounded = false, 
                         ${size === "small" && " text-sm"}
                         ${size === "medium" && " text-base"}
                         ${size === "medium" && " text-lg"}
-                        mb-0.5
+                        mb-0.5x
                     `}
                 />
             }
