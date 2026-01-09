@@ -16,7 +16,7 @@ const skills = [
 
 export function AboutSection() {
     return (
-        <section id="about">
+        <section>
             <h6 className=" text-base md:text-xl text-primary font-semibold text-center md:text-left">About Me</h6>
             <div className=" mt-4 grid gap-12 grid-cols-1 md:grid-cols-2">
                 <FadeIn>

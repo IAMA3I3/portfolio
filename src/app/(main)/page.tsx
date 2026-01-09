@@ -1,4 +1,5 @@
 import { AboutSection } from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Hero from "@/components/Hero";
 import { ProjectSection } from "@/components/ProjectsSection";
 
@@ -9,10 +10,13 @@ export default function Home() {
         <Hero />
         <ProjectSection />
       </div>
-      <div className=" py-8 bg-slate-200 dark:bg-slate-600">
+      <div  id="about" data-section className=" py-20 bg-slate-200 dark:bg-slate-600">
         <div className=" container mx-auto px-6 space-y-16">
           <AboutSection />
         </div>
+      </div>
+      <div  id="contact" data-section className=" container py-20 mx-auto px-6 space-y-16">
+        <ContactSection />
       </div>
     </div>
   );

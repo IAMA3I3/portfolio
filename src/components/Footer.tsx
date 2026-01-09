@@ -5,7 +5,7 @@ import { FaWhatsapp, FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/
 export default function Footer() {
 
     return (
-        <div className=" mt-4 w-full bg-slate-700 text-white py-4">
+        <div className=" mt-12 w-full bg-slate-700 text-white py-4">
             <div className=" container mx-auto px-6">
                 <div className=" flex flex-col gap-4 md:flex-row justify-between items-center">
                     <div className=" flex gap-4 items-center text-lg">

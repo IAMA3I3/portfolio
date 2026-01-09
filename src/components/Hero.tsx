@@ -29,7 +29,7 @@ export default function Hero() {
                             <Link href={'/projects'}>
                                 <Button text="View Projects" size="large" fullWidth />
                             </Link>
-                            <Link href={'/contact'}>
+                            <Link href={'/#contact'}>
                                 <Button text="Contact Me" size="large" outlined fullWidth />
                             </Link>
                         </div>

@@ -12,7 +12,7 @@ const navLinks = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/#about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/#contact" },
 ]
 
 export function MainNavbar() {
