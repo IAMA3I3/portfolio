@@ -11,7 +11,7 @@ import { IoCloseOutline } from "react-icons/io5"
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/#about" },
     { name: "Contact", href: "/contact" },
 ]
 
