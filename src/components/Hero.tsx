@@ -9,7 +9,7 @@ export default function Hero() {
             <div className=" flex flex-col-reverse md:flex-row gap-12 items-center text-center md:text-left">
                 <div className=" flex-1">
                     <FadeIn delay={0.25}>
-                        <p className="mb-4 text-sm font-medium text-primary">
+                        <p className="mb-4 text-sm font-medium text-primary dark:text-muted md:dark:text-primary">
                             Hi, I’m Abdulazeez 👋
                         </p>
                     </FadeIn>

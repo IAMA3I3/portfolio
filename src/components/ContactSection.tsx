@@ -9,7 +9,7 @@ export default function ContactSection() {
     return (
         <section>
             <div className=" w-full p-8 rounded-xl shadow-lg border-l border-b border-border bg-linear-60 from-black/20 dark:from-white/20 via-black/10 dark:via-white/30 to-black/20 dark:to-white/20">
-                <h6 className=" text-base md:text-xl text-primary font-semibold text-center md:text-left">Contact Me</h6>
+                <h6 className=" text-base md:text-xl text-primary font-semibold text-center md:text-left dark:text-white md:dark:text-primary">Contact Me</h6>
                 <h2 className=" mb-2 text-2xl md:text-3xl text-center md:text-left">Let’s work together</h2>
                 <p className=" text-muted font-semibold text-sm text-center md:text-left">Have a project or opportunity in mind? Send me a message and I’ll get back to you.</p>
                 <div className=" mt-8 flex gap-8 flex-col md:flex-row *:w-full">
