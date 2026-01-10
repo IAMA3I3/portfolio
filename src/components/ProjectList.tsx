@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 type ProjectListProps = {
     featured?: boolean
+    allowGrid2?: boolean
 }
 
 async function getFeaturedProjects() {
@@ -21,7 +22,7 @@ async function getFeaturedProjects() {
 
 async function getAllProjects() {
     return client.fetch(`
-    *[_type == "project"] | order(_createdAt desc) {
+    *[_type == "project"] | order(coalesce(featured, false) desc, _createdAt desc) {
       title,
       description,
       "image": image.asset->url,
@@ -32,12 +33,12 @@ async function getAllProjects() {
   `)
 }
 
-export async function ProjectList({ featured = false }: ProjectListProps) {
+export async function ProjectList({ featured = false, allowGrid2 = false }: ProjectListProps) {
 
     const projects = featured ? await getFeaturedProjects() : await getAllProjects()
 
     return (
-        <div className={` grid gap-8 grid-cols-1 lg:grid-cols-3`}>
+        <div className={` grid gap-8 grid-cols-1 ${allowGrid2 && " sm:grid-cols-2"} lg:grid-cols-3`}>
             {
                 projects.map((project: any) => (
                     <FadeIn key={project.title}>
@@ -52,3 +53,4 @@ export async function ProjectList({ featured = false }: ProjectListProps) {
 
 // *[_type == "project" && featured == true] | order(_createdAt desc) // featured projects
 // *[_type == "project"] | order(_createdAt desc) // all projects
+// *[_type == "project"] | order(coalesce(featured, false) desc, _createdAt desc) // all project but featured comes first
