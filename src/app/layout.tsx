@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+
 export const metadata: Metadata = {
   title: {
     default: "Abdulazeez Salami – Frontend Developer",
@@ -33,12 +35,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Abdulazeez Salami" }],
   creator: "Abdulazeez Salami",
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Abdulazeez Salami – Frontend Developer",
     description:
       "Frontend developer building clean, modern, and scalable web applications.",
-    url: "https://your-domain.com",
+    url: siteUrl,
     siteName: "Abdulazeez Salami Portfolio",
     images: [
       {
