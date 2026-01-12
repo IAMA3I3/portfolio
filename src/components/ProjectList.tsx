@@ -8,7 +8,8 @@ type ProjectListProps = {
 }
 
 async function getFeaturedProjects() {
-    return client.fetch(`
+  return client.fetch(
+    `
     *[_type == "project" && featured == true] | order(_createdAt desc) {
       title,
       description,
@@ -17,11 +18,18 @@ async function getFeaturedProjects() {
       liveUrl,
       githubUrl
     }
-  `)
+    `,
+    {},
+    {
+      next: { revalidate: 60 }, // revalidate every 60s
+    }
+  )
 }
 
+
 async function getAllProjects() {
-    return client.fetch(`
+  return client.fetch(
+    `
     *[_type == "project"] | order(coalesce(featured, false) desc, _createdAt desc) {
       title,
       description,
@@ -30,8 +38,14 @@ async function getAllProjects() {
       liveUrl,
       githubUrl
     }
-  `)
+    `,
+    {},
+    {
+      next: { revalidate: 60 },
+    }
+  )
 }
+
 
 export async function ProjectList({ featured = false, allowGrid2 = false }: ProjectListProps) {
 
