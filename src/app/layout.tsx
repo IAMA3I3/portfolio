@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { siteUrl } from "@/lib/seo";
+
+const themeInitScript = `
+  try {
+    var theme = localStorage.getItem('theme');
+    var isDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', isDark);
+  } catch (e) {}
+`
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,10 +96,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-default`}
       >
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
