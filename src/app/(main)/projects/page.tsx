@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "A collection of web development projects built with React, Next.js, and modern web technologies.",
+  alternates: {
+    canonical: "/projects",
+  },
 }
 
 

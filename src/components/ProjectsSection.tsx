@@ -10,7 +10,7 @@ export async function ProjectSection() {
 
     return (
         <section>
-            <h6 className=" text-base md:text-xl text-primary font-semibold text-center md:text-left">Projects</h6>
+            <p className=" text-base md:text-xl text-primary font-semibold text-center md:text-left">Projects</p>
             <h2 className=" mb-8 text-2xl md:text-3xl text-center md:text-left">Some of the projects I’ve worked on recently.</h2>
             <Suspense fallback={<Loading />}>
                 <ProjectList featured />

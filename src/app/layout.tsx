@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { siteUrl } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Abdulazeez Salami",
+  jobTitle: "Web Developer",
+  url: siteUrl,
+  image: `${siteUrl}/assets/me.webp`,
+  email: "mailto:abdulazeezsalami19@gmail.com",
+  sameAs: [
+    "https://www.linkedin.com/in/abdulazeezsalami19/",
+    "https://web.facebook.com/profile.php?id=100084453611899",
+    "https://www.instagram.com/_az_ziz/",
+  ],
+}
 
 export const metadata: Metadata = {
   title: {
@@ -36,6 +50,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Abdulazeez Salami" }],
   creator: "Abdulazeez Salami",
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: "Abdulazeez Salami – Web Developer",
     description:
@@ -72,6 +100,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cursor-default`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
         <Toaster position="bottom-right" />
       </body>
