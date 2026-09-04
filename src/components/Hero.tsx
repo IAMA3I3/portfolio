@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./Button";
 import { FadeIn } from "./FadeIn";
 
@@ -37,10 +38,13 @@ export default function Hero() {
                 </div>
                 <div className=" w-full max-w-80">
                     <FadeIn>
-                        <img
-                            src={'/assets/me.webp'}
+                        <Image
+                            src="/assets/me.webp"
                             alt="Abdulazeez Salami"
-                            className=" w-full"
+                            width={788}
+                            height={807}
+                            priority
+                            className=" w-full h-auto"
                         />
                     </FadeIn>
                 </div>

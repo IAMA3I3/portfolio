@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react";
+import Image from "next/image";
 import { FaLink, FaGithub, FaExpand } from "react-icons/fa6";
 import { Modal } from "./Modal";
 
@@ -20,8 +21,15 @@ export default function ProjectCard({ title, description, image, techStack, live
     return (
         <>
             <div className=" group rounded-xl shadow hover:shadow-xl dark:shadow-black/60 overflow-hidden border-l border-b border-border bg-linear-60 from-black/20 dark:from-white/20 via-black/10 dark:via-white/30 to-black/20 dark:to-white/20">
-                <div className=" w-full h-40 overflow-hidden bg-black">
-                    <img src={image} alt={title} onClick={() => setOpen(true)} className=" w-full h-full object-cover object-top group-hover:scale-110 transition cursor-pointer" />
+                <div className=" relative w-full h-40 overflow-hidden bg-black">
+                    <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        onClick={() => setOpen(true)}
+                        className=" object-cover object-top group-hover:scale-110 transition cursor-pointer"
+                    />
                 </div>
                 <div className=" p-4">
                     <h3 className=" text-lg font-semibold">{title}</h3>
@@ -60,8 +68,8 @@ export default function ProjectCard({ title, description, image, techStack, live
             {/* Modal */}
             <Modal isOpen={open} onClose={() => setOpen(false)}>
                 <div className=" flex flex-col lg:flex-row *:w-full">
-                    <div className=" h-40 lg:h-auto lg:min-h-40 bg-gray-800">
-                        <img src={image} alt={title} className=" w-full h-full object-contain" />
+                    <div className=" relative h-56 lg:h-72 bg-gray-800">
+                        <Image src={image} alt={title} fill sizes="(min-width: 1024px) 50vw, 100vw" className=" object-contain" />
                     </div>
                     <div className=" p-4">
                         <h3 className=" text-lg font-semibold">{title}</h3>
