@@ -17,29 +17,29 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 
 export const metadata: Metadata = {
   title: {
-    default: "Abdulazeez Salami – Frontend Developer",
+    default: "Abdulazeez Salami – Web Developer",
     template: "%s | Abdulazeez Salami",
   },
   icons: {
     icon: "/assets/ic.png"
   },
   description:
-    "Frontend developer specializing in React, Next.js, TypeScript, and modern web interfaces.",
+    "Web developer specializing in React, Next.js, TypeScript, and full-stack web applications.",
   keywords: [
-    "Frontend Developer",
+    "Web Developer",
+    "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
     "JavaScript",
     "TypeScript",
-    "Web Developer",
   ],
   authors: [{ name: "Abdulazeez Salami" }],
   creator: "Abdulazeez Salami",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Abdulazeez Salami – Frontend Developer",
+    title: "Abdulazeez Salami – Web Developer",
     description:
-      "Frontend developer building clean, modern, and scalable web applications.",
+      "Web developer building clean, modern, and scalable web applications.",
     url: siteUrl,
     siteName: "Abdulazeez Salami Portfolio",
     images: [
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdulazeez Salami – Frontend Developer",
+    title: "Abdulazeez Salami – Web Developer",
     description:
-      "Frontend developer specializing in React, Next.js, and TypeScript.",
+      "Web developer specializing in React, Next.js, and TypeScript.",
     images: ["/assets/ic.png"],
   },
 }

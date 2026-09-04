@@ -7,7 +7,7 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "A collection of frontend projects built with React, Next.js, and modern web technologies.",
+    "A collection of web development projects built with React, Next.js, and modern web technologies.",
 }
 
 

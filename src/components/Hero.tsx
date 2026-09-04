@@ -15,7 +15,7 @@ export default function Hero() {
                     </FadeIn>
                     <FadeIn delay={0.5}>
                         <h1 className="mb-6 text-2xl font-bold leading-tight md:text-4xl">
-                            Frontend Developer building modern, scalable web apps
+                            Web Developer building modern, scalable web apps
                         </h1>
                     </FadeIn>
                     <FadeIn delay={0.75}>

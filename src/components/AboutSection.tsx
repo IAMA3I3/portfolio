@@ -22,9 +22,10 @@ export function AboutSection() {
                 <FadeIn>
                     <div className="">
                         <p className="mb-4 text-muted">
-                            I’m a frontend developer who enjoys building clean, scalable, and
-                            user-focused web applications. I work mostly with React and Next.js,
-                            and I care deeply about performance, accessibility, and good UI/UX.
+                            I’m a web developer who enjoys building clean, scalable, and
+                            user-focused web applications. I work across the stack with React,
+                            Next.js, and PHP/MySQL, and I care deeply about performance,
+                            accessibility, and good UI/UX.
                         </p>
                         <p className="text-muted">
                             I enjoy turning designs into functional products and collaborating
