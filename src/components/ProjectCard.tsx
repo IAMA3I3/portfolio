@@ -67,9 +67,9 @@ export default function ProjectCard({ title, description, image, techStack, live
 
             {/* Modal */}
             <Modal isOpen={open} onClose={() => setOpen(false)}>
-                <div className=" flex flex-col lg:flex-row *:w-full">
-                    <div className=" relative h-56 lg:h-72 bg-gray-800">
-                        <Image src={image} alt={title} fill sizes="(min-width: 1024px) 50vw, 100vw" className=" object-contain" />
+                <div className=" flex flex-col">
+                    <div className=" relative w-full aspect-video bg-gray-800">
+                        <Image src={image} alt={title} fill sizes="(min-width: 640px) 42rem, 100vw" className=" object-contain" />
                     </div>
                     <div className=" p-4">
                         <h3 className=" text-lg font-semibold">{title}</h3>
