@@ -70,14 +70,6 @@ export const metadata: Metadata = {
       "Web developer building clean, modern, and scalable web applications.",
     url: siteUrl,
     siteName: "Abdulazeez Salami Portfolio",
-    images: [
-      {
-        url: "/assets/ic.png",
-        width: 1200,
-        height: 630,
-        alt: "Abdulazeez Salami Portfolio",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -86,7 +78,6 @@ export const metadata: Metadata = {
     title: "Abdulazeez Salami – Web Developer",
     description:
       "Web developer specializing in React, Next.js, and TypeScript.",
-    images: ["/assets/ic.png"],
   },
 }
 
