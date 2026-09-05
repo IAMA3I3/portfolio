@@ -35,8 +35,10 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
             />
 
             {/* Modal content */}
-            <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-xl bg-background shadow-xl animate-fadeIn overflow-hidden">
-                {children}
+            <div className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-hidden rounded-xl bg-background shadow-xl animate-fadeIn">
+                <div className="max-h-[90vh] overflow-y-auto">
+                    {children}
+                </div>
             </div>
 
             {/* close button */}
